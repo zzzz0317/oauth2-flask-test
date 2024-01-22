@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错误提示</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            color: #ff0000;
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .error-container {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <h1>{% if title %}{{ title }}{% else %}发生错误{% endif %}</h1>
+    <p>{% if content %}{{ content }}{% else %}请稍后再试{% endif %}</p>
+    <p><a href="/">返回首页</a></p>
+</div>
+</body>
+</html>

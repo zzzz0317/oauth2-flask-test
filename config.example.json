@@ -1,0 +1,10 @@
+{
+  "listen_addr": "127.0.0.1",
+  "listen_port": 8000,
+  "app_url": "http://127.0.0.1:8000",
+  "app_secret_key" : "your_secret_key",
+  "endpoint": "http://127.0.0.1:9000",
+  "client_id": "x",
+  "client_secret": "xx",
+  "dict_key_whitelist": []
+}
